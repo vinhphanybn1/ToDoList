@@ -1,0 +1,57 @@
+.todoItem {
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+}
+
+.title {
+  color: black;
+  font-size: 15px;
+  font-weight: bold;
+  font-family: Arial;
+  margin-top: 20px;
+  margin-bottom: 15px
+}
+
+.descriptionArea {
+  width: 100%;
+  height: 200px;
+  padding: inherit;
+  text-indent: 10px;
+
+}
+
+.flex {
+  display: flex;
+}
+
+.w100 {
+  width: 100%;
+}
+
+.btnAdd {
+  border: none;
+  background-color: #5CB85C;
+  color: white;
+  width: 100%;
+  border-radius: 3px;
+  height: 25px;
+  margin-top: 40px
+}
+
+.dueDate {
+  width: 48%;
+  margin-right: 4%;
+}
+
+.piority {
+  width: 48%;
+}
+
+.inputDueDate {
+  height: 30px;
+}
+
+.inputPiority {
+  height: 34px;
+}

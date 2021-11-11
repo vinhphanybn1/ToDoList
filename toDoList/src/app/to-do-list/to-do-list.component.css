@@ -1,0 +1,61 @@
+.titleHeader {
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-family: Arial;
+}
+
+.contentLeft {
+  width: 40%;
+  border: solid 1px black;
+  padding: 30px 40px
+}
+
+.contentRight {
+  width: 60%;
+  border: solid 1px black;
+  padding-top: 30px;
+  padding-left: 60px;
+  padding-right: 60px;
+  position: relative;
+}
+
+.btnDetail {
+  border: none;
+  color: white;
+  background-color: rgb(0 188 212);
+  height: 30px;
+  width: 100px;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+
+.btnRemove {
+  border: none;
+  color: white;
+  background-color: rgb(217 84 79);
+  height: 30px;
+  width: 100px;
+  border-radius: 5px;
+}
+
+.btnDone {
+  border: none;
+  color: white;
+  background-color: rgb(34 150 243);
+  height: 30px;
+  width: 100px;
+  border-radius: 5px;
+  margin: auto 0;
+}
+
+.footerRight {
+  display: flex;
+  height: 60px;
+  background-color: rgb(224 224 224);
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: -1px;
+  border: 1px solid black
+}

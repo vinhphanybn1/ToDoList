@@ -4,6 +4,14 @@
   display: block;
 }
 
+.inputTitle {
+  width: 100%;
+  border: grey solid 1px;
+  height: 30px;
+  padding: inherit;
+  text-indent: 10px;
+}
+
 .title {
   color: black;
   font-size: 15px;
@@ -35,8 +43,9 @@
   color: white;
   width: 100%;
   border-radius: 3px;
-  height: 25px;
-  margin-top: 40px
+  height: 30px;
+  margin-top: 40px;
+  cursor: pointer;
 }
 
 .dueDate {
@@ -54,4 +63,8 @@
 
 .inputPiority {
   height: 34px;
+}
+.error{
+  margin-top: 30px;
+  color: red;
 }

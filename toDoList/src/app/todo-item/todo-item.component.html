@@ -2,8 +2,8 @@
 >
 
   <div class="todoItem">
-    <input placeholder="Add new task..." [(ngModel)]="selectedTODO.title" class="form-control" name="title"
-           style="width: 100%; border:grey solid 1px; height: 30px; padding: inherit; text-indent: 10px;" required="true">
+    <input placeholder="Add new task..." [(ngModel)]="selectedTODO.title" class="form-control inputTitle" name="title"
+           required="true">
     <div class="title">
       Description
     </div>
@@ -42,7 +42,7 @@
 
   </ng-container>
   <ng-template #Add>
-    <button type="submit" (click)="add()" class="btnAdd">
+    <button type="submit" (click)="add(selectedTODO)" class="btnAdd">
       Add
     </button>
   </ng-template>
@@ -52,6 +52,10 @@
 
 
 </form>
+<div class="error">
+  {{errorInput}}
+
+</div>
 
 
 <!--<pre>{{ todoForm.value | json }}</pre>-->

@@ -1,38 +1,38 @@
 <div style="display: flex; border: black solid 1px">
   <div class="contentLeft">
     <div class="titleHeader">New Task</div>
-    <app-todo-item></app-todo-item>
+    <app-todo-item (addEvent)="listenEventAdd($event)"></app-todo-item>
   </div>
   <div class="contentRight">
     <div class="titleHeader">To Do List</div>
-    <input placeholder="Search..." class="form-control" name="title"
-           style="width: 100%; border:grey solid 1px; height: 30px; padding:initial; text-indent: 10px;"
-           required="true" (keydown.enter)="search()">
-    <div style="margin-bottom: 150px">
-      <div *ngFor="let item of (toDoList$ | async) ; let i = index"
-           style="width: 100%; margin-top: 20px  ">
-        <div style="display: flex; border: 1px solid; padding: 20px 20px">
-          <div style="width: 5%; margin: auto 0">
-            <input type="checkbox" (click)="addListSelected(item)">
+    <input placeholder="Search..." class="form-control inputSearch" name="title" [(ngModel)]="keySearch"
+           required="true" (keydown.enter)="search(keySearch)">
+    <div class="listItemTODO">
+      <div *ngFor="let item of toDoList$; let i = index" class="eachItemTODO">
+        <div class="ItemTODO">
+          <div class="styleCheckBox">
+            <label>
+              <input type='checkbox' (click)="addListSelected($event,item)">
+              <span></span>
+
+            </label>
+<!--            <input type="checkbox" (change)="addListSelected($event,item)">-->
           </div>
-          <div style="width: 65%; margin: auto 0">{{item.title}}</div>
-          <button (click)=" details[i]=!details[i]"
-                  class="btnDetail"
-          >Details
-          </button>
+          <div class="titleEachItem">{{item.title}}</div>
+          <button (click)=" details[i]=!details[i]" class="btnDetail">Details</button>
 
           <button class="btnRemove" (click)="deleteItem(item)">Remove</button>
         </div>
 
-        <div *ngIf="details[i]" style="padding: 25px ; border: 1px solid black">
+        <div *ngIf="details[i]" class="detailAreaItem">
 
           <app-todo-item [TODOItem]="item"></app-todo-item>
         </div>
       </div>
     </div>
-    <div class="footerRight">
+    <div *ngIf="listSelected.length>0" class="footerRight">
 
-      <div style="width: 65%; margin: auto 20px">Buck Action</div>
+      <div class="titleBuckAction">Buck Action</div>
       <button
         class="btnDone"
       >Done

@@ -11,6 +11,14 @@
   padding: 30px 40px
 }
 
+.inputSearch {
+  width: 100%;
+  border: grey solid 1px;
+  height: 30px;
+  padding: initial;
+  text-indent: 10px;
+}
+
 .contentRight {
   width: 60%;
   border: solid 1px black;
@@ -28,6 +36,7 @@
   width: 100px;
   border-radius: 5px;
   margin-right: 20px;
+  cursor: pointer;
 }
 
 .btnRemove {
@@ -37,6 +46,7 @@
   height: 30px;
   width: 100px;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .btnDone {
@@ -47,6 +57,7 @@
   width: 100px;
   border-radius: 5px;
   margin: auto 0;
+  cursor: pointer;
 }
 
 .footerRight {
@@ -58,4 +69,61 @@
   bottom: 0;
   left: -1px;
   border: 1px solid black
+}
+
+.listItemTODO {
+  margin-bottom: 150px;
+}
+
+.eachItemTODO {
+  width: 100%;
+  margin-top: 20px
+}
+
+.ItemTODO {
+  display: flex;
+  border: 1px solid;
+  padding: 20px 20px
+}
+
+.styleCheckBox {
+  width: 5%;
+  margin: auto 0;
+}
+
+.titleEachItem {
+  width: 65%;
+  margin: auto 0
+}
+
+.detailAreaItem {
+  padding: 25px;
+  border: 1px solid black;
+}
+
+.titleBuckAction {
+  width: 65%;
+  margin: auto 20px;
+}
+
+
+label input {
+  display: none; /* Hide the default checkbox */
+}
+
+/* Style the artificial checkbox */
+label span {
+  height: 15px;
+  width: 15px;
+  border: 1px solid grey;
+  display: inline-block;
+  position: relative;
+}
+
+/* Style its checked state...with a ticked icon */
+[type=checkbox]:checked + span:before {
+  content: '\2714';
+  position: absolute;
+  top: -8px;
+  right: 0;
 }
